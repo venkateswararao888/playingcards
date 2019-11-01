@@ -1,0 +1,197 @@
+Playing cards
+
+Introduction:
+The standard 52-card deck of French playing cards is the most common deck of playing cards used today. It includes thirteen ranks in each of the four suits: clubs (♣), diamonds (♦), hearts (♥)and spades (♠), with reversible "court" or face cards. Each suit includes an ace, a king, queen and jack, each depicted with a symbol of its suit; and ranks two through ten, with each card depicting that many symbols of its suit.
+
+Algorithm to display :
+
+Step-1
+Prepare our classes
+Create three classes 
+1.class card
+2.class deck
+3.class player
+
+Step-2
+Create class card
+Card is going to take a suit and value self.and set its attributes suit ,value equal to whatever we pass in when we Create a card
+Step-3
+Make a string that print value and suit.
+Step-4
+Create our class card
+Step-4.1-
+Start with init method(initialise attribute cards with an empty list)
+Step-4.2-
+Create a loop that will loops suit through (“spades”,”clubs”,”diamonds”,”hearts”)
+Step-4.3-
+Create another loop that loop values in range (1,14)
+
+Step-5
+Append card (suit, value) to the self.cards list under second for loop, stop
+
+Output:- 1-13 cards with suit displayed total 52 cards (4*13=52)!
+
+
+
+Shuffling cards
+Step-1
+Use “import random” to use the “fisher Yates shuffle”
+Step-2
+Create a shuffle method that takes in self.
+Step-2.1
+Create a loop in this method ,for “i in range(len(self.cards)) minus 1(which is the last element and in this case we want to go to zero),0,-1decrement)”
+step-2.2
+Create a random number “r” call 
+“r=random . ran dit (0,i)”.range from 0to I
+Step-2.3
+Pick a random index that is to the left of list.swap “i” and “r”
+Step-3
+Display the shuffled list.s
+
+Draw method
+
+Step-1
+Create a draw card method that takes in self which will return self.cards.pop( )
+
+Create player
+
+Step-1
+Create a draw method that takes in self and a deck in which we will pass in a deck
+Step-2
+Append a deck.draw cards( ) to the self.hand and return self for card drawn
+
+Step-3
+Create a show hand method to show the hand
+Step-3.1
+Create a for loop that will loop card in self.hand 
+Step-3.2
+Use card.show( ) to show our hand 
+
+PSEUDOCODE
+
+method build(self):
+ for s in ("spades", "clubs", "diamonds", "hearts");
+  for r in range(1,14);
+      self cards append(cards(s ,v))
+        method show(self)
+              for c in self.cards:
+                    c.show( )
+
+method shuffle(self):
+       for i in range(len(self.cards)-1,0,-1);
+             r=random.randit(0,i)
+             self.cards[i], self.cards[r]=self.cards[r],self.cards[i]
+                    deck= deck( )
+                    deck.shuffle( )
+                     deck.show( )
+
+method draw card(self):
+          return self cards.pop( )
+                   deck=deck( )
+                   deck.shuffle( )
+                   card = deck.drawcard( )
+                   card.show( )
+
+method class player:
+        method draw(self, deck):
+                self hand.append(deck.draw card( ) )
+                         return self
+         method show hand(self):
+                   for card in self.hand:
+                       card.show( )
+                       deck=deck( )
+                       deck=shuffle( )
+
+method playingcards( )
+{
+    build( );
+    shuffle( );
+    draw card( );
+    player( );
+}
+
+
+CODE:
+
+print(“playing cards”)
+class card:
+     def _init_(self):
+           pass
+class deck:
+     def _init_(self):
+          pass
+class player:
+      def _init_(self):
+            pass
+class card:
+         def _init_(self, suit, val):
+               self.suit = suit
+               self.suit=val
+         def show(self):
+               print (“{ } of { }”.format(self.value, self.suit))
+class deck:
+       def  _init_(self):
+              self.cards=[ ]
+              self.build( )
+       def build(self):
+             for s in [“spades”, “clubs” , “diamonds” , “hearts”]:
+                  for v in range(1,14):
+                        self.cards.append(Cards(s, v))
+       def  show(self):
+              for c in self.cards:
+                   c. show( )
+       deck= Deck( )
+       deck. Show ( )
+import random
+     def  shuffle(self):
+          for i in range(len(self.cards) -1, 0, -1):
+               r= random.randint(0, i)
+               self.cards[i], self.cards[r] = self. cards[r], self.cards[i]    
+deck = Deck( )
+deck.shuffle( )
+Deck.show( )
+        def drawCard(self):
+                return self.cards.pop( )
+deck = Deck( )
+deck.shuffle( )
+
+card = deck.drawCard( )
+card.show( )
+def draw(self, deck):
+      self.hand.append(deck.drawCard( ))
+      return self
+class player:
+       def_init_(self,name):
+            self.name = name
+            self.hand = [ ]
+       def draw(self, deck):
+            self.hand,append(deck.drawCard( ))
+            return self
+      def  showHand(self):
+            for card in self.hand:
+                 card.show( )
+deck = Deck( )
+deck . shuffle( )
+            
+Bob = player(“bob”)
+Bob.draw(deck)
+Bob.showHand( )
+
+Jack = player(jack”)
+jack.draw(deck)
+jack.showHand( )
+
+Quill = player(“quill”)
+quill.draw(deck)
+quill.showHand( )
+
+John = player(“john”)
+john.draw(deck)
+john.showHand( )
+
+Kim = player(“kim”)
+kim.draw(deck)
+kim.showHand( )
+time complexity:
+we can simply simulate the whole process and find the extract order of the cards after all the N shufflrs are done.
+time complexity is :O(N* 2^N)
