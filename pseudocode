@@ -1,0 +1,42 @@
+PSEUDOCODE
+
+method build(self):
+ for s in ("spades", "clubs", "diamonds", "hearts");
+  for r in range(1,14);
+      self cards append(cards(s ,v))
+        method show(self)
+              for c in self.cards:
+                    c.show( )
+
+method shuffle(self):
+       for i in range(len(self.cards)-1,0,-1);
+             r=random.randit(0,i)
+             self.cards[i], self.cards[r]=self.cards[r],self.cards[i]
+                    deck= deck( )
+                    deck.shuffle( )
+                     deck.show( )
+
+method draw card(self):
+          return self cards.pop( )
+                   deck=deck( )
+                   deck.shuffle( )
+                   card = deck.drawcard( )
+                   card.show( )
+
+method class player:
+        method draw(self, deck):
+                self hand.append(deck.draw card( ) )
+                         return self
+         method show hand(self):
+                   for card in self.hand:
+                       card.show( )
+                       deck=deck( )
+                       deck=shuffle( )
+
+method playingcards( )
+{
+    build( );
+    shuffle( );
+    draw card( );
+    player( );
+}
