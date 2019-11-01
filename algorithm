@@ -1,0 +1,65 @@
+Algorithm to display :
+
+Step-1
+Prepare our classes
+Create three classes 
+1.class card
+2.class deck
+3.class player
+
+Step-2
+Create class card
+Card is going to take a suit and value self.and set its attributes suit ,value equal to whatever we pass in when we Create a card
+Step-3
+Make a string that print value and suit.
+Step-4
+Create our class card
+Step-4.1-
+Start with init method(initialise attribute cards with an empty list)
+Step-4.2-
+Create a loop that will loops suit through (“spades”,”clubs”,”diamonds”,”hearts”)
+Step-4.3-
+Create another loop that loop values in range (1,14)
+
+Step-5
+Append card (suit, value) to the self.cards list under second for loop, stop
+
+Output:- 1-13 cards with suit displayed total 52 cards (4*13=52)!
+
+
+
+Shuffling cards
+Step-1
+Use “import random” to use the “fisher Yates shuffle”
+Step-2
+Create a shuffle method that takes in self.
+Step-2.1
+Create a loop in this method ,for “i in range(len(self.cards)) minus 1(which is the last element and in this case we want to go to zero),0,-1decrement)”
+step-2.2
+Create a random number “r” call 
+“r=random . ran dit (0,i)”.range from 0to I
+Step-2.3
+Pick a random index that is to the left of list.swap “i” and “r”
+Step-3
+Display the shuffled list.s
+
+Draw method
+
+Step-1
+Create a draw card method that takes in self which will return self.cards.pop( )
+
+Create player
+
+Step-1
+Create a draw method that takes in self and a deck in which we will pass in a deck
+Step-2
+Append a deck.draw cards( ) to the self.hand and return self for card drawn
+
+Step-3
+Create a show hand method to show the hand
+Step-3.1
+Create a for loop that will loop card in self.hand 
+Step-3.2
+Use card.show( ) to show our hand 
+
+  
